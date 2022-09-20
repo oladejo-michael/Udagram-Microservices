@@ -8,15 +8,15 @@ services:
 # Build and tag
 script:
   - docker build -t udagram-api-feed ./udagram-api-feed
-  - docker tag udagram-api-feed mickeyboy16/udagram-api-feed:v6
+  - docker tag udagram-api-feed mickeyboy16/udagram-api-feed:v8
   - docker build -t udagram-api-user ./udagram-api-user
-  - docker tag udagram-api-user mickeyboy16/udagram-api-user:v6
+  - docker tag udagram-api-user mickeyboy16/udagram-api-user:v8
   - docker build -t udagram-api-reverseproxy ./udagram-reverseproxy
-  - docker tag udagram-api-reverseproxy mickeyboy16/udagram-reverseproxy:v6
+  - docker tag udagram-api-reverseproxy mickeyboy16/udagram-reverseproxy:v8
 
 # Push
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push mickeyboy16/udagram-api-feed:v6
-  - docker push mickeyboy16/udagram-api-user:v6
-  - docker push mickeyboy16/udagram-reverseproxy:v6
+  - docker push mickeyboy16/udagram-api-feed:v8
+  - docker push mickeyboy16/udagram-api-user:v8
+  - docker push mickeyboy16/udagram-reverseproxy:v8
