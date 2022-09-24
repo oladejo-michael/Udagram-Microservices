@@ -29,7 +29,7 @@
     "node-sass": "^7.0.3",
     "pg": "^8.2.1",
     "reflect-metadata": "^0.1.13",
-    "sequelize": "^5.22.4",
+    "sequelize": "^5.22.5",
     "sequelize-typescript": "^0.6.9"
   },
   "devDependencies": {
